@@ -44,7 +44,7 @@ namespace esphome
 
                     // Perform power trip
                     power_pin_->digital_write(!power_pin_->digital_read());
-                    delay(1000);
+                    delay(700);
                     power_pin_->digital_write(!power_pin_->digital_read());
                 }
                 else
