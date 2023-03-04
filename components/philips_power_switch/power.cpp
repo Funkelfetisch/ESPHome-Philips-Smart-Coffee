@@ -43,7 +43,7 @@ namespace esphome
                     mainboard_uart_->flush();
 
                     // Perform power trip
-                    delay(300);
+                    delay(150);
                     power_pin_->digital_write(!power_pin_->digital_read());
                     delay(700);
                     power_pin_->digital_write(!power_pin_->digital_read());
