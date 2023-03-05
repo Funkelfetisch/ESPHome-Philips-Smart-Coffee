@@ -50,9 +50,9 @@ namespace esphome
 
                     // Perform power trip
                     delay(1500);
-                    power_pin_->digital_write(LOW);
+                    power_pin_->digital_write(0);
                     delay(1500);
-                    power_pin_->digital_write(HIGH);
+                    power_pin_->digital_write(1);
                 }
                 else
                 {
