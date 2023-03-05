@@ -20,12 +20,6 @@ namespace esphome
 
             void Power::write_state(bool state)
             {
-                                    // Perform power trip
-                    delay(1500);
-                    power_pin_->digital_write(!power_pin_->digital_read());
-                    delay(1500);
-                    power_pin_->digital_write(!power_pin_->digital_read());
-                
                 if (state)
                 {
                     // Send pre-power on message
@@ -49,9 +43,9 @@ namespace esphome
                     mainboard_uart_->flush();
 
                     // Perform power trip
-                    delay(1500);
+                    delay(100);
                     power_pin_->digital_write(!power_pin_->digital_read());
-                    delay(1500);
+                    delay(700);
                     power_pin_->digital_write(!power_pin_->digital_read());
                 }
                 else
